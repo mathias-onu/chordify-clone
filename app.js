@@ -1,6 +1,7 @@
 const SLOTS = 16;
 const BEATS = ['1', 'e', '&', 'a', '2', 'e', '&', 'a', '3', 'e', '&', 'a', '4', 'e', '&', 'a'];
 const MODES = ['played', 'movable'];
+const THEMES = ['light', 'dark'];
 const SONG_SOURCE = { kind: 'song' };
 const DEFAULT_SYNC = { bpm: 120, beatsPerBar: 4, barsPerLine: 4, linesPerPage: 6, firstBarTime: 0, taps: [], tapping: false };
 const SYNC_FIELDS = [
@@ -196,6 +197,7 @@ const ui = {
   shapes: $('shapes'), tab: $('tab'), pages: $('pages'), play: $('play'), loop: $('loop'), rate: $('rate'),
   seek: $('seek'), time: $('time'), autoscroll: $('autoscroll'), guitar: $('guitar'),
   fileInput: $('file-input'), sync: $('sync'), syncTap: $('sync-tap'), syncTaps: $('sync-taps'), notice: $('notice'),
+  navTitle: $('nav-title'), theme: $('theme'),
   modeGroup: document.querySelector('.mode'), notesBox: document.querySelector('.notes'),
   modeButtons: [...document.querySelectorAll('[data-mode]')],
 };
@@ -267,7 +269,7 @@ let bars = [];
 let sections = [];
 let live = { bar: -1, slot: -1, chord: null, time: '' };
 let state = {
-  source: SONG_SOURCE, songId: null, mode: 'played', guitar: true, loopSection: null, autoscroll: true, rate: 1,
+  source: SONG_SOURCE, songId: null, mode: 'played', theme: 'light', guitar: true, loopSection: null, autoscroll: true, rate: 1,
   audioFile: null, sync: DEFAULT_SYNC,
 };
 
@@ -293,6 +295,7 @@ function setState(patch) {
   song = songs.find((s) => s.id === (isPdf(state) ? state.source.song : state.songId)) ?? null;
   store('tabplayer.songId', state.songId);
   store('tabplayer.mode', state.mode);
+  store('tabplayer.theme', state.theme);
   store('tabplayer.guitar', state.guitar ? 'on' : 'off');
   const sourceChanged = state.source !== prev.source || state.songId !== prev.songId;
   if (sourceChanged) renderSource();
@@ -325,8 +328,14 @@ function renderSource() {
   else renderSong();
 }
 
+function setTitle(text) {
+  ui.title.textContent = text;
+  ui.navTitle.textContent = text;
+  document.title = `${text} · Fretline`;
+}
+
 function renderSong() {
-  ui.title.textContent = song.title;
+  setTitle(song.title);
   ui.meta.textContent = `${song.key} · ${song.tempo} · ${song.time}`;
   ui.notes.innerHTML = notesHtml(song, state.mode);
   ui.shapes.innerHTML = shapesHtml(song, state.mode);
@@ -343,15 +352,13 @@ function renderSong() {
     return { t0: s.t0, t1: s.t1, el: headEls[sectionIndex] };
   });
   resetLive();
-  document.title = `${song.title} · Tab Player`;
 }
 
 function renderPdfHead() {
   const { source } = state;
   const modeLabel = song && ui.modeButtons.find((b) => b.dataset.mode === source.mode)?.textContent;
-  ui.title.textContent = song ? song.title : source.name;
+  setTitle(song ? song.title : source.name);
   ui.meta.textContent = [modeLabel, 'PDF', `${source.pages} page${source.pages === 1 ? '' : 's'}`].filter(Boolean).join(' · ');
-  document.title = `${ui.title.textContent} · Tab Player`;
 }
 
 function overlayEl(className, index, [left, top, width, height]) {
@@ -401,6 +408,8 @@ function renderSync() {
 function renderControls() {
   const { off } = tracks(state, song);
   for (const b of ui.modeButtons) b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode));
+  document.documentElement.dataset.theme = state.theme;
+  ui.theme.setAttribute('aria-label', state.theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
   ui.loop.setAttribute('aria-pressed', String(state.loopSection !== null));
   ui.autoscroll.setAttribute('aria-pressed', String(state.autoscroll));
   ui.guitar.disabled = !off;
@@ -511,6 +520,10 @@ function toggleMode() {
   if (!isPdf(state)) setState({ mode: state.mode === 'played' ? 'movable' : 'played' });
 }
 
+function toggleTheme() {
+  setState({ theme: state.theme === 'dark' ? 'light' : 'dark' });
+}
+
 function toggleGuitar() {
   if (tracks(state, song).off) setState({ guitar: !state.guitar });
 }
@@ -534,6 +547,7 @@ const KEYS = {
   'Shift+ArrowRight': nextSection,
   KeyL: toggleLoop,
   KeyM: toggleMode,
+  KeyD: toggleTheme,
   KeyA: toggleAutoscroll,
   KeyG: toggleGuitar,
   KeyT: markNow,
@@ -685,6 +699,7 @@ function bind() {
   ui.loop.addEventListener('click', toggleLoop);
   ui.autoscroll.addEventListener('click', toggleAutoscroll);
   ui.guitar.addEventListener('click', toggleGuitar);
+  ui.theme.addEventListener('click', toggleTheme);
   ui.rate.addEventListener('change', () => setState({ rate: Number(ui.rate.value) }));
   ui.seek.addEventListener('input', () => seek(Number(ui.seek.value)));
   for (const el of [deck.full, deck.bed]) {
@@ -710,11 +725,13 @@ async function init() {
     .join(''));
   const savedId = recall('tabplayer.songId');
   const savedMode = recall('tabplayer.mode');
+  const theme = document.documentElement.dataset.theme;
   bind();
   renderPlayButton();
   setState({
     songId: songs.some((s) => s.id === savedId) ? savedId : songs[0].id,
     mode: MODES.includes(savedMode) ? savedMode : 'played',
+    theme: THEMES.includes(theme) ? theme : 'light',
     guitar: recall('tabplayer.guitar') !== 'off',
   });
   requestAnimationFrame(tick);

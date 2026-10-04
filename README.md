@@ -1,14 +1,16 @@
-# Tab Player
+# Fretline
+
+Fretline is a tab player for the songs in this folder.
 
 Run `./serve.sh` and open http://localhost:8765/. It starts `serve.py`, a stdlib static server with HTTP Range support; plain `python3 -m http.server` cannot seek inside the mp3s, and `file://` cannot fetch `data/songs.json`.
 
-Keys: Space play/pause, Left/Right ±5s, Shift+Left/Right previous/next section, L loop section, M switch tab version, A autoscroll, G guitar on/off, T sync to now (PDF Sync panel).
+Keys: Space play/pause, Left/Right ±5s, Shift+Left/Right previous/next section, L loop section, M switch tab version, D light/dark theme, A autoscroll, G guitar on/off, T sync to now (PDF Sync panel).
 Click a section header or a bar to jump there. Scrolling by hand while playing turns autoscroll off.
 The Guitar button switches between the full mix and the track without guitar. It is disabled when a song has no guitar-free track.
 
 ## Opening a PDF
 
-Drop a tab PDF anywhere on the window, or use Open PDF + audio at the top of the song list. You can drop the PDF and its mp3 together or one after the other.
+Drop a tab PDF anywhere on the window, or use Open PDF + audio in the top bar. You can drop the PDF and its mp3 together or one after the other.
 
 PDFs exported by this project carry their bar map in the document metadata. The player highlights each bar on the page and uses the song's own audio and sections. A dropped mp3 replaces that audio.
 

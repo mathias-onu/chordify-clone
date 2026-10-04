@@ -22,3 +22,5 @@ Sync fields:
 - First bar is the time in seconds where the first line starts. Set to now (or T) copies the current playback time into it.
 
 To time each line by hand, press Tap lines, play the song, and press T at the start of each line. Lines after the last tap continue at the BPM. Clear taps removes them. The player saves the Sync settings per file and restores them when you open the same file again.
+
+After a fresh clone run `vendor/fetch.sh` once to download pdf.js; the `audio/` folder is not in git either, copy the mp3s there (see `audio_noguitar` paths in `data/songs.json`).

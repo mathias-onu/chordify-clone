@@ -1,0 +1,17 @@
+# third-party code (re-fetch with vendor/fetch.sh)
+vendor/pdfjs/
+
+# audio: large and copyrighted, kept locally only
+audio/
+
+# python
+__pycache__/
+*.pyc
+venv/
+venv*/
+.venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp

@@ -48,6 +48,8 @@ class Doc:
         self.y = PAGE_H - MARGIN
         self.page = 1
         self.title = title
+        self.boxes = []
+        self.record = False
 
     def need(self, h):
         if self.y - h < MARGIN + 14:
@@ -174,6 +176,8 @@ class Doc:
         c.line(x0, top, x0, top - 5 * LINE_GAP)
         for bi, bar in enumerate(bars):
             bx = x0 + bi * BAR_W
+            if self.record:
+                self.boxes.append([self.page, round(bx, 1), round(top - 5 * LINE_GAP - 20, 1), round(BAR_W, 1), round(5 * LINE_GAP + 36, 1)])
             c.setStrokeColor(black)
             c.setLineWidth(0.8)
             c.line(bx + BAR_W, top, bx + BAR_W, top - 5 * LINE_GAP)
@@ -212,8 +216,8 @@ class Doc:
                 c.rect(xx - tw / 2 - 0.8, yy - 2.6, tw + 1.6, 6.8, stroke=0, fill=1)
                 c.setFillColor(black)
                 c.drawCentredString(xx, yy - 2.2, txt)
-                if annot:
-                    annots[slot] = annot
+                if annot and annot not in annots.get(slot, ""):
+                    annots[slot] = (annots[slot] + " " + annot) if slot in annots else annot
             c.setFont("Helvetica", 5.5)
             c.setFillColor(GRAY)
             for slot, a in annots.items():
@@ -254,6 +258,8 @@ def resolve_bar(bar, shapes, pattern):
             idx = [i for i, f in enumerate(frets) if f not in ("x", None)]
         elif strings == "bass":
             idx = [next(i for i, f in enumerate(frets) if f not in ("x", None))]
+        elif strings == "top2":
+            idx = [i for i, f in enumerate(frets) if f not in ("x", None)][-2:]
         elif strings == "top3":
             idx = [i for i, f in enumerate(frets) if f not in ("x", None)][-3:]
         elif strings == "top4":
@@ -290,6 +296,9 @@ def render(spec, out, mode):
     d.wrapped(meta, 8.5)
     for n in spec.get("notes", []):
         d.wrapped("- " + n, 8)
+    if mode == "played":
+        for n in spec.get("notes_played", []):
+            d.wrapped("- " + n, 8)
     if mode == "movable":
         for n in spec.get("notes_movable", []):
             d.wrapped("- " + n, 8)
@@ -319,7 +328,7 @@ def render(spec, out, mode):
         bar = resolve_bar([demo_chord], shapes, pat)
         bar["label"] = None
         d.tab_system([bar], shapes, pat)
-    # sections
+    d.record = True
     for sec in spec["sections"]:
         d.space(4)
         d.need(SYSTEM_H + 30)
@@ -331,6 +340,7 @@ def render(spec, out, mode):
         for i in range(0, len(bars), BARS_PER_LINE):
             d.tab_system(bars[i:i + BARS_PER_LINE], shapes, pat)
     d.footer()
+    d.c.setSubject(json.dumps({"tabplayer": 1, "song": spec.get("id"), "mode": mode, "page": [PAGE_W, PAGE_H], "bars": d.boxes}, separators=(",", ":")))
     d.c.save()
 
 

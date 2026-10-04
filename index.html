@@ -8,7 +8,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav id="songs" class="songs" aria-label="Songs"></nav>
+<nav id="songs" class="songs" aria-label="Songs">
+  <button type="button" id="open-files" class="open">Open PDF + audio</button>
+  <input id="file-input" type="file" multiple accept=".pdf,application/pdf,audio/*,.mp3,.m4a,.wav" hidden>
+</nav>
 <main id="main" class="main">
   <header class="song-head">
     <h1 id="title"></h1>
@@ -23,7 +26,24 @@
     </details>
     <div id="shapes" class="shapes"></div>
   </header>
+  <section id="sync" class="sync" aria-label="Sync" hidden>
+    <div class="sync-row">
+      <label>BPM <input id="sync-bpm" type="number" min="20" max="300" step="0.1" value="120"></label>
+      <label>Beats per bar <input id="sync-beats" type="number" min="1" step="1" value="4"></label>
+      <label>Bars per line <input id="sync-bars" type="number" min="1" step="1" value="4"></label>
+      <label>Lines per page <input id="sync-lines" type="number" min="1" step="1" value="6"></label>
+      <label>First bar (s) <input id="sync-first" type="number" min="0" step="0.01" value="0"></label>
+      <button type="button" id="sync-now" title="Set first bar to the current time (T)">Set to now</button>
+    </div>
+    <div class="sync-row">
+      <button type="button" id="sync-tap" class="toggle" aria-pressed="false" title="Tap each line start (T)">Tap lines</button>
+      <button type="button" id="sync-clear">Clear taps</button>
+      <ol id="sync-taps" class="taps"></ol>
+    </div>
+    <p id="notice" class="notice"></p>
+  </section>
   <div id="tab" class="tab"></div>
+  <div id="pages" class="pages" hidden></div>
 </main>
 <footer class="player">
   <button type="button" id="play" class="play" aria-label="Play"></button>
@@ -41,9 +61,11 @@
   </select>
   <input id="seek" class="seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="Seek">
   <span id="time" class="time">0:00 / 0:00</span>
+  <button type="button" id="guitar" class="toggle" title="Guitar on/off (G)">Guitar</button>
   <button type="button" id="autoscroll" class="toggle" title="Autoscroll (A)">Autoscroll</button>
 </footer>
 <audio id="audio" preload="auto"></audio>
+<audio id="audio-noguitar" preload="auto"></audio>
 <script src="app.js"></script>
 </body>
 </html>

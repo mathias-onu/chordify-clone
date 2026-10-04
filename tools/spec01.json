@@ -4,18 +4,187 @@
  "key_root": "F",
  "tempo": "89 bpm",
  "time": "4/4",
- "source": "Voi cânta bunătatea Ta Revive.mp3 (local file)",
+ "source": "Voi cânta bunătatea Ta Revive.mp3; right hand from the byTheWaters playthrough (youtube.com/watch?v=E9tRk3AWjhg)",
  "notes": [
-  "Electric guitar part analysed from the demucs guitar stem: the electric mostly plays sustained, delay/reverb-washed chord voicings (ambient swells), so this is chord-based tab with the picking that the attacks on the record suggest, not a note-for-note lead transcription.",
-  "Form: Intro - Verse 1 - Verse 2 (drums enter) - Pre-chorus (quiet) - Verse 3 - Verse 4 - Chorus x2 - Tag - Bridge - Breakdown (guitar out) - Final chorus.",
-  "The bass walks a lot (F/C, F/A, Bb/D, C/E); the guitar stays on the plain shapes, only C/E is a real guitar voicing on the record."
+  "Right hand: fingerstyle, no pick. Thumb (p) takes the bass string, index (i) lives on the G string, middle (m) on the B string, ring (a) on the high e. Play over the neck pickup with a dotted-eighth delay and reverb.",
+  "Verses: the 3-3-3-3-2-2 pattern. Count the 16ths 1 e & a 2 e & a 3 e & a 4 e & a; plucks fall on 1, a-of-1, &-of-2, e-of-3, 4, &-of-4. The delay fills the gaps, so keep the pattern steady and let every string ring.",
+  "Form: Intro - Verse 1 (16 bars) - Chorus 1 (quiet) - Verse 2 - Chorus 2 x2 - Tag - Bridge - Breakdown (guitar out) - Final chorus. The bass walks (F/C, Bb/D, C/E); the guitar stays on the shapes shown."
+ ],
+ "notes_played": [
+  "Left hand: F is played with the thumb over the neck on the low F and the G string left open (F C F G C F). Dm and Bbmaj7 share one grip (index barre on B+e at fret 1, middle on G at 2, ring on D at 3) with the bass on A5 or A1. Dsus4 is a G shape over the same D bass: D G D G."
  ],
  "notes_movable": [
-  "Same part with no open strings: A-shape barre for F at the 8th fret, Am-shape Dm at 5, E-shape Bb at 6, E-shape C at 8. Keep the hand between frets 5 and 10."
+  "Same part with no open strings: F as x-8-10-10-8-8 (keeps the add9 colour), Dm7 x-5-7-5-6-5, Dsus4 x-5-7-7-8-5, Bbmaj7 as the E-shape at 6, Bb and C as E-shape barres. Keep the hand between frets 5 and 10."
  ],
+ "shapes_played_override": {
+  "F": [
+   [
+    1,
+    3,
+    3,
+    0,
+    1,
+    1
+   ],
+   [
+    "T",
+    3,
+    4,
+    0,
+    1,
+    1
+   ]
+  ],
+  "Dm": [
+   [
+    "x",
+    5,
+    3,
+    2,
+    1,
+    1
+   ],
+   [
+    "x",
+    4,
+    3,
+    2,
+    1,
+    1
+   ]
+  ],
+  "Dsus4": [
+   [
+    "x",
+    5,
+    5,
+    0,
+    3,
+    3
+   ],
+   [
+    "x",
+    3,
+    4,
+    0,
+    1,
+    2
+   ]
+  ],
+  "Bbmaj7": [
+   [
+    "x",
+    1,
+    3,
+    2,
+    1,
+    1
+   ],
+   [
+    "x",
+    1,
+    3,
+    2,
+    1,
+    1
+   ]
+  ],
+  "Bb": [
+   [
+    "x",
+    1,
+    3,
+    3,
+    1,
+    1
+   ],
+   [
+    "x",
+    1,
+    3,
+    4,
+    1,
+    1
+   ]
+  ]
+ },
+ "shapes_movable_override": {
+  "F": [
+   [
+    "x",
+    8,
+    10,
+    10,
+    8,
+    8
+   ],
+   [
+    "x",
+    1,
+    3,
+    4,
+    1,
+    1
+   ]
+  ],
+  "Dm": [
+   [
+    "x",
+    5,
+    7,
+    5,
+    6,
+    5
+   ],
+   [
+    "x",
+    1,
+    3,
+    1,
+    2,
+    1
+   ]
+  ],
+  "Dsus4": [
+   [
+    "x",
+    5,
+    7,
+    7,
+    8,
+    5
+   ],
+   [
+    "x",
+    1,
+    2,
+    3,
+    4,
+    1
+   ]
+  ],
+  "Bbmaj7": [
+   [
+    6,
+    8,
+    7,
+    7,
+    6,
+    6
+   ],
+   [
+    1,
+    3,
+    2,
+    2,
+    1,
+    1
+   ]
+  ]
+ },
  "patterns": {
-  "swell": {
-   "desc": "Verses/intro: slow broken chord with everything ringing (big delay + reverb). Bass note on beat 1, then climb through the chord. p i m a = thumb index middle ring.",
+  "pick": {
+   "desc": "Verses and intro: 3-3-3-3-2-2 fingerpicking, one bar = 16 sixteenths. 1: thumb bass + middle on B. a-of-1: index on G. &-of-2: fingers brush D G B e. e-of-3: index on G. 4: thumb bass + middle on B. &-of-4: index G + middle B. Let everything ring.",
    "demo": "F",
    "events": [
     [
@@ -24,34 +193,61 @@
      "p"
     ],
     [
+     0,
+     [
+      4
+     ],
+     "m"
+    ],
+    [
      3,
-     "b1",
+     [
+      3
+     ],
      "i"
     ],
     [
      6,
-     "b2",
+     "top4",
+     "i m a"
+    ],
+    [
+     9,
+     [
+      3
+     ],
+     "i"
+    ],
+    [
+     12,
+     "bass",
+     "p"
+    ],
+    [
+     12,
+     [
+      4
+     ],
      "m"
     ],
     [
-     7,
-     "t0",
-     "a"
+     14,
+     [
+      3
+     ],
+     "i"
     ],
     [
-     10,
-     "b2",
+     14,
+     [
+      4
+     ],
      "m"
-    ],
-    [
-     13,
-     "t1",
-     "a"
     ]
    ]
   },
   "strum": {
-   "desc": "Choruses: full-chord strums. Count: 1 & 2 . 3 & 4 . a   ->   D D D . D D D . U  (push on the 'a' of 4 into the next bar).",
+   "desc": "Choruses: fingerstyle strums, thumb down (D), fingers up (U). Count 1 . & 3 & 4 &  ->  D . D D U D U, with a light thumb tap on 2. Accent 1 and the & of 2.",
    "demo": "Bb",
    "events": [
     [
@@ -60,12 +256,12 @@
      "D"
     ],
     [
-     2,
+     4,
      "all",
-     "D"
+     "(d)"
     ],
     [
-     4,
+     6,
      "all",
      "D"
     ],
@@ -76,8 +272,8 @@
     ],
     [
      10,
-     "all",
-     "D"
+     "top4",
+     "U"
     ],
     [
      12,
@@ -85,30 +281,60 @@
      "D"
     ],
     [
-     15,
-     "all",
+     14,
+     "top4",
      "U"
     ]
    ]
   },
-  "hold": {
-   "desc": "Bridge/tag: one down-strum on the downbeat and let it ring; pick the top three strings on the '&' of 2; strum again on beat 4.",
-   "demo": "Gm",
+  "pulse": {
+   "desc": "Tag and bridge: thumb plucks the bass on 1, then middle + ring pinch the top two strings on every eighth note (1 & 2 & 3 & 4 &). Steady and even; this is the build under the bridge vocal.",
+   "demo": "F",
    "events": [
     [
      0,
-     "all",
-     "D"
+     "bass",
+     "p"
+    ],
+    [
+     0,
+     "top2",
+     "m a"
+    ],
+    [
+     2,
+     "top2",
+     "m a"
+    ],
+    [
+     4,
+     "top2",
+     "m a"
     ],
     [
      6,
-     "top3",
-     "i m a"
+     "top2",
+     "m a"
+    ],
+    [
+     8,
+     "top2",
+     "m a"
+    ],
+    [
+     10,
+     "top2",
+     "m a"
     ],
     [
      12,
-     "all",
-     "D"
+     "top2",
+     "m a"
+    ],
+    [
+     14,
+     "top2",
+     "m a"
     ]
    ]
   }
@@ -116,8 +342,8 @@
  "sections": [
   {
    "name": "Intro (0:03)",
-   "pattern": "swell",
-   "note": "Guitar alone with keys. Two bars of F, free tempo.",
+   "pattern": "pick",
+   "note": "Guitar alone with keys, two bars of F. Start the pattern straight away.",
    "bars": [
     [
      "F"
@@ -129,89 +355,54 @@
   },
   {
    "name": "Verse 1 (0:08)",
-   "pattern": "swell",
-   "note": "No drums yet. Each chord lasts two bars.",
+   "pattern": "pick",
+   "note": "Drums enter halfway. Bar 2 of each phrase: F for two beats, then Am on beats 3-4 walks the bass down into Dm. Bar 6: Bbmaj7 then C/E on beats 3-4 walks up into F.",
    "bars": [
     [
      "F"
-    ],
-    [
-     "F"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "F"
-    ],
-    [
-     "F"
-    ]
-   ]
-  },
-  {
-   "name": "Verse 2 (0:30)",
-   "pattern": "swell",
-   "note": "Drums enter at the end of the first F. Six bars, then the pre-chorus picks up the two F bars.",
-   "bars": [
-    [
-     "F"
-    ],
-    [
-     "F"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "Bb"
-    ]
-   ]
-  },
-  {
-   "name": "Pre-chorus (0:46) - quiet",
-   "pattern": "swell",
-   "note": "Band drops out; guitar swells. Bar 5 splits F and C/E.",
-   "bars": [
-    [
-     "F"
-    ],
-    [
-     "F"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "C"
     ],
     [
      "F",
+     "Am"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dsus4"
+    ],
+    [
+     "Bbmaj7"
+    ],
+    [
+     "Bbmaj7",
      "C/E"
     ],
     [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F",
+     "Am"
+    ],
+    [
      "Dm"
     ],
     [
-     "Bb"
+     "Dsus4"
     ],
     [
-     "C"
+     "Bbmaj7"
+    ],
+    [
+     "Bbmaj7",
+     "C/E"
     ],
     [
      "F"
@@ -222,81 +413,18 @@
    ]
   },
   {
-   "name": "Verse 3 (1:13)",
-   "pattern": "swell",
-   "note": "Full band.",
-   "bars": [
-    [
-     "F"
-    ],
-    [
-     "F"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "F"
-    ],
-    [
-     "F"
-    ]
-   ]
-  },
-  {
-   "name": "Verse 4 (1:34)",
-   "pattern": "swell",
-   "note": "",
-   "bars": [
-    [
-     "F"
-    ],
-    [
-     "F"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Dm"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "Bb"
-    ],
-    [
-     "F"
-    ],
-    [
-     "F"
-    ]
-   ]
-  },
-  {
-   "name": "Chorus 1 (1:55)",
+   "name": "Chorus 1 (0:50) - quiet",
    "pattern": "strum",
-   "note": "Bar 3 splits F and C/E (bass walks down to E).",
+   "note": "Band drops out; strum softly with the thumb and let it swell. The bass plays E under the C in bar 2 on the record.",
    "bars": [
     [
      "Bb"
     ],
     [
-     "C/E"
+     "C"
     ],
     [
-     "F",
-     "C/E"
+     "F"
     ],
     [
      "Dm"
@@ -316,7 +444,66 @@
    ]
   },
   {
-   "name": "Chorus 2 (2:16)",
+   "name": "Verse 2 (1:12)",
+   "pattern": "pick",
+   "note": "Full band, same picking.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F",
+     "Am"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dsus4"
+    ],
+    [
+     "Bbmaj7"
+    ],
+    [
+     "Bbmaj7",
+     "C/E"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F",
+     "Am"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dsus4"
+    ],
+    [
+     "Bbmaj7"
+    ],
+    [
+     "Bbmaj7",
+     "C/E"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 2 (1:54)",
    "pattern": "strum",
    "note": "",
    "bars": [
@@ -324,11 +511,10 @@
      "Bb"
     ],
     [
-     "C/E"
+     "C"
     ],
     [
-     "F",
-     "C/E"
+     "F"
     ],
     [
      "Dm"
@@ -348,9 +534,40 @@
    ]
   },
   {
-   "name": "Tag (2:38)",
-   "pattern": "hold",
-   "note": "Vocals and drums, guitar thins out to held chords.",
+   "name": "Chorus 3 (2:16)",
+   "pattern": "strum",
+   "note": "",
+   "bars": [
+    [
+     "Bb"
+    ],
+    [
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Tag (2:37)",
+   "pattern": "pulse",
+   "note": "Vocals and drums. Switch to the eighth-note pulse on the top two strings.",
    "bars": [
     [
      "F"
@@ -359,7 +576,7 @@
      "F"
     ],
     [
-     "Bb"
+     "F"
     ],
     [
      "F"
@@ -368,8 +585,8 @@
   },
   {
    "name": "Bridge (2:48)",
-   "pattern": "hold",
-   "note": "Half-bar changes in bars 4, 6, 7, 8, 10. Guitar holds chords, bass does the walking.",
+   "pattern": "pulse",
+   "note": "Half-bar changes in bars 4, 6, 7, 8, 10. Keep the pulse going through every change; the bass does the walking.",
    "bars": [
     [
      "Gm"
@@ -415,9 +632,9 @@
    ]
   },
   {
-   "name": "Breakdown (3:21) - guitar tacet",
+   "name": "Breakdown (3:20) - guitar tacet",
    "pattern": null,
-   "note": "Vocals + pad only; chords given for reference. Come back in on the next section.",
+   "note": "Vocals + pad only; chords given for reference. Come back in on the final chorus.",
    "bars": [
     [
      "Bb"
@@ -440,9 +657,9 @@
    ]
   },
   {
-   "name": "Final chorus (3:37)",
+   "name": "Final chorus (3:36)",
    "pattern": "strum",
-   "note": "Ends on C (let ring).",
+   "note": "Ends on C, let it ring.",
    "bars": [
     [
      "F"
@@ -471,5 +688,6 @@
     ]
    ]
   }
- ]
+ ],
+ "id": "voi-canta"
 }

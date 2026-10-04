@@ -114,6 +114,8 @@ def lib(d, names):
 def main():
     spec = json.load(open(sys.argv[1]))
     base = sys.argv[2]
+    PLAYED.update({k: tuple(v) for k, v in spec.get("shapes_played_override", {}).items()})
+    MOVABLE.update({k: tuple(v) for k, v in spec.get("shapes_movable_override", {}).items()})
     names = []
     for sec in spec["sections"]:
         for bar in sec["bars"]:

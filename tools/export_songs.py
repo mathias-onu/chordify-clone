@@ -26,6 +26,8 @@ def snap(t, beats):
 out = []
 for spec_file, stem, audio, sid in SONGS:
     spec = json.load(open(spec_file))
+    played = dict(PLAYED, **{k: tuple(v) for k, v in spec.get("shapes_played_override", {}).items()})
+    movable = dict(MOVABLE, **{k: tuple(v) for k, v in spec.get("shapes_movable_override", {}).items()})
     chart = json.load(open(f"{stem}_chart.json"))
     beats = chart["beat_times"]
     bpm = float(re.match(r"[\d.]+", spec["tempo"]).group())
@@ -38,7 +40,7 @@ for spec_file, stem, audio, sid in SONGS:
     for pat in spec["patterns"].values():
         if pat.get("demo") and pat["demo"] not in names:
             names.append(pat["demo"])
-    shapes = {"played": lib(PLAYED, names), "movable": lib(MOVABLE, names)}
+    shapes = {"played": lib(played, names), "movable": lib(movable, names)}
     starts = [snap(section_start(s["name"]), beats) for s in spec["sections"]]
     duration = beats[-1] + barlen
     sections = []
@@ -64,7 +66,8 @@ for spec_file, stem, audio, sid in SONGS:
         sections.append({"name": sec["name"], "note": sec.get("note", ""), "pattern": sec.get("pattern"), "t0": bars[0]["t0"], "t1": bars[-1]["t1"], "bars": bars})
     out.append({
         "id": sid, "title": spec["title"], "key": spec["key"], "tempo": spec["tempo"], "time": spec.get("time", "4/4"),
-        "audio": "audio/" + audio, "duration": round(duration, 2), "notes": spec.get("notes", []), "notes_movable": spec.get("notes_movable", []),
+        "audio": "audio/" + audio, "audio_noguitar": "audio/noguitar/" + audio,
+        "pdf": {"played": f"../{spec['title'].split(' (')[0].split(' - ')[0]} - Tab 1 (as played).pdf"}, "duration": round(duration, 2), "notes": spec.get("notes", []), "notes_movable": spec.get("notes_movable", []),
         "transpose_table": spec.get("transpose_table", ""), "shapes": shapes,
         "patterns": {k: {"desc": v["desc"]} for k, v in spec["patterns"].items()}, "sections": sections,
     })

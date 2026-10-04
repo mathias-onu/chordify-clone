@@ -1,0 +1,628 @@
+{
+ "title": "Christus Victor (Amen) - Keith & Kristyn Getty, Cochren & Co.",
+ "key": "F major",
+ "key_root": "F",
+ "tempo": "76 bpm",
+ "time": "4/4",
+ "source": "YouTube: Christus Victor (Amen) | Official Audio, saved as 'Christus Victor (Amen) Getty.mp3'",
+ "notes": [
+  "Electric guitar: broken-chord 8ths in the verses (low F3/C4 register, mostly the four lowest strings of each shape), driving 16th-syncopated strums in the choruses, sparse held chords in the interludes. The bridge ('Amen, amen...') walks F - C - Dm - Am - Gm - C - Dm - C/E in half bars.",
+  "The chord the bass plays under the second bar of the verse loop reads as C with D and F on top (Csus2/4); it is written here as Csus4 - the plain C shape works too.",
+  "Form: Intro - Verse 1 - Chorus 1 - Interlude - Verse 2 - Chorus 2 - Interlude 2 - Verse 3 - Chorus 3 - Bridge - Final chorus - Outro."
+ ],
+ "notes_movable": [
+  "F = A-shape barre at 8, C = E-shape at 8 (Csus4 adds the 10th fret on the G string), Gm = E-shape at 3, Bb = E-shape at 6, Dm = Am-shape at 5. Slash chords use 4-string voicings so the bass note is right: C/E x-7-10-9-8-x, Bb/D x-5-8-7-6-x, Dm/A x-x-7-7-6-5, F/A x-x-7-5-6-5."
+ ],
+ "patterns": {
+  "arp": {
+   "desc": "Verses: 8th-note broken chord  p i m a i m a p a  (bass on 1, climb, re-strike bass on 4). Accents fall on 2 and 3.",
+   "demo": "F",
+   "events": [
+    [
+     0,
+     "bass",
+     "p"
+    ],
+    [
+     2,
+     "b1",
+     "i"
+    ],
+    [
+     4,
+     "b2",
+     "m"
+    ],
+    [
+     6,
+     "t0",
+     "a"
+    ],
+    [
+     8,
+     "b1",
+     "i"
+    ],
+    [
+     10,
+     "b2",
+     "m"
+    ],
+    [
+     11,
+     "t1",
+     "a"
+    ],
+    [
+     12,
+     "bass",
+     "p"
+    ],
+    [
+     14,
+     "t0",
+     "a"
+    ]
+   ]
+  },
+  "strum16": {
+   "desc": "Choruses: 16th-note push pattern  1 . . a 2 . . a 3 e . a 4 . & .   ->   D . . U D . . U D . U D . U .",
+   "demo": "Bb",
+   "events": [
+    [
+     0,
+     "all",
+     "D"
+    ],
+    [
+     3,
+     "all",
+     "U"
+    ],
+    [
+     4,
+     "all",
+     "D"
+    ],
+    [
+     7,
+     "all",
+     "U"
+    ],
+    [
+     9,
+     "all",
+     "D"
+    ],
+    [
+     11,
+     "all",
+     "U"
+    ],
+    [
+     12,
+     "all",
+     "D"
+    ],
+    [
+     14,
+     "all",
+     "U"
+    ]
+   ]
+  },
+  "hold": {
+   "desc": "Interludes/outro: strum on 1, let ring, pick the top three strings on the 'a' of 3, strum on 4.",
+   "demo": "C",
+   "events": [
+    [
+     0,
+     "all",
+     "D"
+    ],
+    [
+     11,
+     "top3",
+     "i m a"
+    ],
+    [
+     12,
+     "all",
+     "D"
+    ]
+   ]
+  },
+  "arp8": {
+   "desc": "Bridge: steady 8th-note arpeggio p m a m, chord changes on beat 3.",
+   "demo": "Dm",
+   "events": [
+    [
+     0,
+     "bass",
+     "p"
+    ],
+    [
+     2,
+     "b2",
+     "m"
+    ],
+    [
+     4,
+     "t0",
+     "a"
+    ],
+    [
+     6,
+     "b2",
+     "m"
+    ],
+    [
+     8,
+     "bass",
+     "p"
+    ],
+    [
+     10,
+     "b2",
+     "m"
+    ],
+    [
+     12,
+     "t0",
+     "a"
+    ],
+    [
+     14,
+     "b2",
+     "m"
+    ]
+   ]
+  }
+ },
+ "sections": [
+  {
+   "name": "Intro (0:01)",
+   "pattern": "arp",
+   "note": "Piano leads; the guitar doubles quietly.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "Csus4"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Bb"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 1 (0:13)",
+   "pattern": "arp",
+   "note": "Electric is barely audible until the last two bars; chords for reference, play the pattern softly.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F",
+     "Bb"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Gm",
+     "Bb"
+    ],
+    [
+     "Bb",
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 1 (0:44)",
+   "pattern": "strum16",
+   "note": "Drums in. Half-bar changes in bars 4 and 6.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb/D",
+     "C/E"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Interlude (1:06)",
+   "pattern": "hold",
+   "note": "",
+   "bars": [
+    [
+     "Csus4"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Bb"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 2 (1:16)",
+   "pattern": "arp",
+   "note": "",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "Csus4"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Csus4"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Gm",
+     "Am"
+    ],
+    [
+     "Bb",
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 2 (1:47)",
+   "pattern": "strum16",
+   "note": "Double chorus.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F",
+     "C/E"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb/D",
+     "C/E"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F",
+     "C/E"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm/A"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Dm",
+     "C/E"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Interlude 2 (2:27)",
+   "pattern": "hold",
+   "note": "Drops to vocals + guitar for the last four bars.",
+   "bars": [
+    [
+     "Csus4"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F/C"
+    ],
+    [
+     "Gm",
+     "Bb"
+    ],
+    [
+     "Bb"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 3 (2:49)",
+   "pattern": "arp",
+   "note": "",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "Csus4"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Gm",
+     "Bb"
+    ],
+    [
+     "Bb",
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 3 (3:08)",
+   "pattern": "strum16",
+   "note": "",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F",
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Dm",
+     "C/E"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Dm",
+     "C/E"
+    ]
+   ]
+  },
+  {
+   "name": "Bridge (3:45)",
+   "pattern": "arp8",
+   "note": "Four-bar loop played three times; third time the Am becomes A (major) pulling to Dm.",
+   "bars": [
+    [
+     "F",
+     "C"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Gm",
+     "C"
+    ],
+    [
+     "Dm",
+     "C/E"
+    ],
+    [
+     "F",
+     "C"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Gm",
+     "C"
+    ],
+    [
+     "Dm",
+     "C/E"
+    ],
+    [
+     "F",
+     "C"
+    ],
+    [
+     "Dm",
+     "A"
+    ],
+    [
+     "Gm",
+     "C"
+    ],
+    [
+     "Dm",
+     "C/E"
+    ]
+   ]
+  },
+  {
+   "name": "Final chorus (4:23)",
+   "pattern": "strum16",
+   "note": "Extended chorus with a Dm/Bb/C tail.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F",
+     "C/E"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm/A"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb/D",
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb/D",
+     "C/E"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb",
+     "C"
+    ],
+    [
+     "Dm",
+     "Am"
+    ],
+    [
+     "Bb",
+     "C"
+    ],
+    [
+     "F",
+     "C"
+    ]
+   ]
+  },
+  {
+   "name": "Outro (5:16)",
+   "pattern": "hold",
+   "note": "Ends on F, let ring.",
+   "bars": [
+    [
+     "Csus4"
+    ],
+    [
+     "Gm",
+     "C"
+    ],
+    [
+     "C",
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  }
+ ]
+}

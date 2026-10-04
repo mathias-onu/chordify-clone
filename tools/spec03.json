@@ -1,0 +1,481 @@
+{
+ "title": "The Lord's Prayer (It's Yours) - Matt Maher",
+ "key": "A major",
+ "key_root": "A",
+ "tempo": "76 bpm (half-time feel; the beat tracker reads 152)",
+ "time": "4/4",
+ "source": "YouTube: Matt Maher - The Lord's Prayer (It's Yours) (Official Music Video), saved as 'The Lord's Prayer (It's Yours) Matt Maher.mp3'",
+ "notes": [
+  "The electric guitar lives on an open-A pedal for most of the song: the low A string keeps pulsing in 8ths while the upper voicing moves A -> E/A -> D/A -> Asus2. The verses are effectively 'A with colour', not real chord changes; chorus and bridge have the actual changes (D A | E | ... A/C# D E F#m).",
+  "Form: Intro - Verse 1 - Chorus 1 - Verse 2 - Chorus 2 - Verse 3 (quiet) - Bridge - Final chorus/tag.",
+  "Intro motif: a two-bar ambient line over the A pedal (approximate, it is drenched in delay): A3 - A4 - G4 - D4 - C4 - A3."
+ ],
+ "notes_movable": [
+  "Without open strings the A pedal becomes the low E string at the 5th fret; shapes: E-shape A at 5, D/A as a 5th-fret barre, E at 7 (A-shape), D at 5 (A-shape), F#m at 2, Bm at 7."
+ ],
+ "patterns": {
+  "pedal": {
+   "desc": "Verses/intro: bass (A) pedal in pulsing 8ths with a slap-back repeat on the 'e'; add the top three strings on the '&' of 2 and of 4.",
+   "demo": "A",
+   "events": [
+    [
+     0,
+     "bass",
+     "p"
+    ],
+    [
+     1,
+     "bass",
+     "p"
+    ],
+    [
+     4,
+     "bass",
+     "p"
+    ],
+    [
+     5,
+     "top3",
+     "i m a"
+    ],
+    [
+     8,
+     "bass",
+     "p"
+    ],
+    [
+     9,
+     "bass",
+     "p"
+    ],
+    [
+     12,
+     "bass",
+     "p"
+    ],
+    [
+     13,
+     "top3",
+     "i m a"
+    ]
+   ]
+  },
+  "strum8": {
+   "desc": "Chorus/bridge: straight 8th-note strum  D D D U D U D U  (accent beats 1 and 3, lighter on the ups).",
+   "demo": "D",
+   "events": [
+    [
+     0,
+     "all",
+     "D"
+    ],
+    [
+     2,
+     "all",
+     "D"
+    ],
+    [
+     4,
+     "all",
+     "D"
+    ],
+    [
+     6,
+     "all",
+     "U"
+    ],
+    [
+     8,
+     "all",
+     "D"
+    ],
+    [
+     10,
+     "all",
+     "U"
+    ],
+    [
+     12,
+     "all",
+     "D"
+    ],
+    [
+     14,
+     "all",
+     "U"
+    ]
+   ]
+  },
+  "soft": {
+   "desc": "Quiet verse: one bass note on 1, top strings on the '&' of 2, let ring.",
+   "demo": "A",
+   "events": [
+    [
+     0,
+     "bass",
+     "p"
+    ],
+    [
+     6,
+     "top3",
+     "i m a"
+    ],
+    [
+     8,
+     "bass",
+     "p"
+    ],
+    [
+     14,
+     "top3",
+     "i m a"
+    ]
+   ]
+  }
+ },
+ "sections": [
+  {
+   "name": "Intro (0:01)",
+   "pattern": "pedal",
+   "note": "Guitar + pad, twelve bars. First two bars show the motif (tab numbers are the actual notes), then the pedal pattern.",
+   "bars": [
+    {
+     "riff": [
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       2,
+       3,
+       2
+      ],
+      [
+       6,
+       5,
+       5
+      ],
+      [
+       8,
+       5,
+       3
+      ],
+      [
+       10,
+       4,
+       3
+      ],
+      [
+       12,
+       4,
+       1
+      ],
+      [
+       14,
+       3,
+       2
+      ]
+     ],
+     "chord": "A",
+     "label": "motif"
+    },
+    {
+     "riff": [
+      [
+       0,
+       1,
+       0
+      ],
+      [
+       4,
+       5,
+       5
+      ],
+      [
+       6,
+       5,
+       3
+      ],
+      [
+       8,
+       4,
+       3
+      ],
+      [
+       12,
+       3,
+       2
+      ]
+     ],
+     "chord": "A",
+     "label": "motif"
+    },
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 1 (0:38)",
+   "pattern": "pedal",
+   "note": "Drums enter. Keep the open A ringing; only the upper voicing changes.",
+   "bars": [
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "E/A"
+    ],
+    [
+     "E/A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "D/A"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 1 (1:04)",
+   "pattern": "strum8",
+   "note": "Half-bar changes D A in bars 1, 3, 5 and A F#m in bar 6.",
+   "bars": [
+    [
+     "D",
+     "A"
+    ],
+    [
+     "E"
+    ],
+    [
+     "D",
+     "A"
+    ],
+    [
+     "E"
+    ],
+    [
+     "D",
+     "A"
+    ],
+    [
+     "A",
+     "F#m"
+    ],
+    [
+     "D"
+    ],
+    [
+     "E"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 2 (1:30)",
+   "pattern": "pedal",
+   "note": "Back on the pedal.",
+   "bars": [
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "E/A"
+    ],
+    [
+     "E/A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "D/A"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 2 (1:55)",
+   "pattern": "strum8",
+   "note": "",
+   "bars": [
+    [
+     "D",
+     "A"
+    ],
+    [
+     "E"
+    ],
+    [
+     "D",
+     "A"
+    ],
+    [
+     "E",
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A",
+     "F#m"
+    ],
+    [
+     "D"
+    ],
+    [
+     "E"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 3 (2:24) - quiet",
+   "pattern": "soft",
+   "note": "Drums out, vocals and guitar only.",
+   "bars": [
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "Asus2"
+    ],
+    [
+     "Asus2"
+    ],
+    [
+     "D/A"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Bridge (2:43)",
+   "pattern": "strum8",
+   "note": "The one place the bass line really moves: A - A/C# - D - E - F#m - E.",
+   "bars": [
+    [
+     "A"
+    ],
+    [
+     "A/C#"
+    ],
+    [
+     "D"
+    ],
+    [
+     "E"
+    ],
+    [
+     "E"
+    ],
+    [
+     "F#m"
+    ],
+    [
+     "F#m"
+    ],
+    [
+     "E"
+    ],
+    [
+     "E"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Final chorus / tag (3:12)",
+   "pattern": "strum8",
+   "note": "Band on A for the 'It's yours' tag; end on A, let ring.",
+   "bars": [
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ]
+   ]
+  }
+ ]
+}

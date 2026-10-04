@@ -1,0 +1,475 @@
+{
+ "title": "Voi cânta bunătatea Ta (Revive)",
+ "key": "F major",
+ "key_root": "F",
+ "tempo": "89 bpm",
+ "time": "4/4",
+ "source": "Voi cânta bunătatea Ta Revive.mp3 (local file)",
+ "notes": [
+  "Electric guitar part analysed from the demucs guitar stem: the electric mostly plays sustained, delay/reverb-washed chord voicings (ambient swells), so this is chord-based tab with the picking that the attacks on the record suggest, not a note-for-note lead transcription.",
+  "Form: Intro - Verse 1 - Verse 2 (drums enter) - Pre-chorus (quiet) - Verse 3 - Verse 4 - Chorus x2 - Tag - Bridge - Breakdown (guitar out) - Final chorus.",
+  "The bass walks a lot (F/C, F/A, Bb/D, C/E); the guitar stays on the plain shapes, only C/E is a real guitar voicing on the record."
+ ],
+ "notes_movable": [
+  "Same part with no open strings: A-shape barre for F at the 8th fret, Am-shape Dm at 5, E-shape Bb at 6, E-shape C at 8. Keep the hand between frets 5 and 10."
+ ],
+ "patterns": {
+  "swell": {
+   "desc": "Verses/intro: slow broken chord with everything ringing (big delay + reverb). Bass note on beat 1, then climb through the chord. p i m a = thumb index middle ring.",
+   "demo": "F",
+   "events": [
+    [
+     0,
+     "bass",
+     "p"
+    ],
+    [
+     3,
+     "b1",
+     "i"
+    ],
+    [
+     6,
+     "b2",
+     "m"
+    ],
+    [
+     7,
+     "t0",
+     "a"
+    ],
+    [
+     10,
+     "b2",
+     "m"
+    ],
+    [
+     13,
+     "t1",
+     "a"
+    ]
+   ]
+  },
+  "strum": {
+   "desc": "Choruses: full-chord strums. Count: 1 & 2 . 3 & 4 . a   ->   D D D . D D D . U  (push on the 'a' of 4 into the next bar).",
+   "demo": "Bb",
+   "events": [
+    [
+     0,
+     "all",
+     "D"
+    ],
+    [
+     2,
+     "all",
+     "D"
+    ],
+    [
+     4,
+     "all",
+     "D"
+    ],
+    [
+     8,
+     "all",
+     "D"
+    ],
+    [
+     10,
+     "all",
+     "D"
+    ],
+    [
+     12,
+     "all",
+     "D"
+    ],
+    [
+     15,
+     "all",
+     "U"
+    ]
+   ]
+  },
+  "hold": {
+   "desc": "Bridge/tag: one down-strum on the downbeat and let it ring; pick the top three strings on the '&' of 2; strum again on beat 4.",
+   "demo": "Gm",
+   "events": [
+    [
+     0,
+     "all",
+     "D"
+    ],
+    [
+     6,
+     "top3",
+     "i m a"
+    ],
+    [
+     12,
+     "all",
+     "D"
+    ]
+   ]
+  }
+ },
+ "sections": [
+  {
+   "name": "Intro (0:03)",
+   "pattern": "swell",
+   "note": "Guitar alone with keys. Two bars of F, free tempo.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 1 (0:08)",
+   "pattern": "swell",
+   "note": "No drums yet. Each chord lasts two bars.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 2 (0:30)",
+   "pattern": "swell",
+   "note": "Drums enter at the end of the first F. Six bars, then the pre-chorus picks up the two F bars.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb"
+    ]
+   ]
+  },
+  {
+   "name": "Pre-chorus (0:46) - quiet",
+   "pattern": "swell",
+   "note": "Band drops out; guitar swells. Bar 5 splits F and C/E.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "C"
+    ],
+    [
+     "F",
+     "C/E"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 3 (1:13)",
+   "pattern": "swell",
+   "note": "Full band.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 4 (1:34)",
+   "pattern": "swell",
+   "note": "",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 1 (1:55)",
+   "pattern": "strum",
+   "note": "Bar 3 splits F and C/E (bass walks down to E).",
+   "bars": [
+    [
+     "Bb"
+    ],
+    [
+     "C/E"
+    ],
+    [
+     "F",
+     "C/E"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Chorus 2 (2:16)",
+   "pattern": "strum",
+   "note": "",
+   "bars": [
+    [
+     "Bb"
+    ],
+    [
+     "C/E"
+    ],
+    [
+     "F",
+     "C/E"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Tag (2:38)",
+   "pattern": "hold",
+   "note": "Vocals and drums, guitar thins out to held chords.",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Bridge (2:48)",
+   "pattern": "hold",
+   "note": "Half-bar changes in bars 4, 6, 7, 8, 10. Guitar holds chords, bass does the walking.",
+   "bars": [
+    [
+     "Gm"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "F/A"
+    ],
+    [
+     "F",
+     "C"
+    ],
+    [
+     "F/C"
+    ],
+    [
+     "Bb",
+     "F"
+    ],
+    [
+     "F",
+     "C/E"
+    ],
+    [
+     "C/E",
+     "Dm"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Bb",
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ]
+   ]
+  },
+  {
+   "name": "Breakdown (3:21) - guitar tacet",
+   "pattern": null,
+   "note": "Vocals + pad only; chords given for reference. Come back in on the next section.",
+   "bars": [
+    [
+     "Bb"
+    ],
+    [
+     "C/E"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "C/E"
+    ]
+   ]
+  },
+  {
+   "name": "Final chorus (3:37)",
+   "pattern": "strum",
+   "note": "Ends on C (let ring).",
+   "bars": [
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Bb"
+    ],
+    [
+     "C/E"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Bb",
+     "C"
+    ],
+    [
+     "C"
+    ]
+   ]
+  }
+ ]
+}

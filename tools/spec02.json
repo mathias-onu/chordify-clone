@@ -1,0 +1,534 @@
+{
+ "title": "Să-nalț jertfa Ta, Isuse - BBSO (live arrangement)",
+ "key": "D minor (0:00-2:30), then E major (2:31-3:50), then F minor (3:51-end)",
+ "key_root": "D",
+ "tempo": "81 bpm",
+ "time": "4/4",
+ "source": "YouTube: Să-nalţ jertfa Ta, Isuse - BBSO, saved as 'Să-nalț jertfa Ta, Isuse BBSO.mp3'",
+ "notes": [
+  "This recording is a three-part arrangement that modulates twice: the main song in D minor (Dm Gm A F C Bb), a middle part in E major (F#m B E G#m C#m A), and a final part in F minor (Fm Ab Eb/G C Db Bb). Each part is charted in its own key below.",
+  "The electric guitar is low in the mix for most of this recording: it swells in the intro (A to Dm), plays a quiet broken-chord figure under the second verse/chorus of part A, is nearly inaudible in part B (pads only), and plays broken chords again in part C. Where the stem is silent the chords are given for reference and the bar is marked tacet.",
+  "Chord detection is less certain in the quiet, piano-only passages (verse 1, part B first half); treat those bars as a guide."
+ ],
+ "notes_movable": [
+  "Transposition table below is for part A (root D). For part B the shapes are rooted on E (E at 7 A-shape, B at 7 E-shape, F#m at 2, C#m at 4, G#m at 4), for part C on F (Fm at 8 A-shape, C at 8, Ab at 4, Db at 4, Eb at 6)."
+ ],
+ "patterns": {
+  "arp": {
+   "desc": "Part A: slow broken chord  p . . . i m . . a . . . m . . .   (bass on 1, two notes on 2, top on 3, inner on 4), let ring.",
+   "demo": "Dm",
+   "events": [
+    [
+     0,
+     "bass",
+     "p"
+    ],
+    [
+     4,
+     "b1",
+     "i"
+    ],
+    [
+     5,
+     "b2",
+     "m"
+    ],
+    [
+     8,
+     "t0",
+     "a"
+    ],
+    [
+     12,
+     "b2",
+     "m"
+    ]
+   ]
+  },
+  "arp2": {
+   "desc": "Part A chorus / part C: syncopated broken chord  p . . i . . m . . a . . i . a .",
+   "demo": "Fm",
+   "events": [
+    [
+     0,
+     "bass",
+     "p"
+    ],
+    [
+     3,
+     "b1",
+     "i"
+    ],
+    [
+     6,
+     "b2",
+     "m"
+    ],
+    [
+     9,
+     "t0",
+     "a"
+    ],
+    [
+     12,
+     "b1",
+     "i"
+    ],
+    [
+     14,
+     "t1",
+     "a"
+    ]
+   ]
+  },
+  "hold": {
+   "desc": "Swells: one strum per bar (or per half bar when the chord changes), volume-swell in, let ring.",
+   "demo": "A",
+   "events": [
+    [
+     0,
+     "all",
+     "D"
+    ],
+    [
+     8,
+     "all",
+     "D"
+    ]
+   ]
+  }
+ },
+ "sections": [
+  {
+   "name": "PART A (D minor) - Intro (0:03)",
+   "pattern": "hold",
+   "note": "Piano; guitar swells in on the A chords.",
+   "bars": [
+    [
+     "Dm"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "Gm"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 1 (0:30) - guitar tacet",
+   "pattern": null,
+   "note": "Piano and voice only. Chords for reference.",
+   "bars": [
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm",
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Interlude (1:12)",
+   "pattern": "arp",
+   "note": "Drums enter.",
+   "bars": [
+    [
+     "Gm"
+    ],
+    [
+     "A"
+    ]
+   ]
+  },
+  {
+   "name": "Verse 2 / Chorus (1:18)",
+   "pattern": "arp2",
+   "note": "Band in; many half-bar changes. The A/C# is the bass walking up Dm - A/C# - Dm.",
+   "bars": [
+    [
+     "A",
+     "Dm"
+    ],
+    [
+     "Dm"
+    ],
+    [
+     "Dm",
+     "A/C#"
+    ],
+    [
+     "A/C#",
+     "Dm"
+    ],
+    [
+     "Dm",
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "F"
+    ],
+    [
+     "Dm",
+     "C"
+    ],
+    [
+     "F"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A",
+     "Dm"
+    ],
+    [
+     "C",
+     "Bb"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A",
+     "Dm"
+    ],
+    [
+     "Dm",
+     "A"
+    ],
+    [
+     "A",
+     "Dm"
+    ],
+    [
+     "Dm",
+     "C",
+     "Bb",
+     "Bb"
+    ],
+    [
+     "Bb",
+     "A"
+    ],
+    [
+     "A",
+     "Dm"
+    ]
+   ]
+  },
+  {
+   "name": "Transition to part B (2:13)",
+   "pattern": "hold",
+   "note": "Modulation passage; chords approximate.",
+   "bars": [
+    [
+     "Gm"
+    ],
+    [
+     "Gm",
+     "F"
+    ],
+    [
+     "Dm",
+     "Eb"
+    ],
+    [
+     "C#m",
+     "B"
+    ],
+    [
+     "F#m",
+     "B"
+    ],
+    [
+     "B"
+    ]
+   ]
+  },
+  {
+   "name": "PART B (E major) - verse (2:31) - guitar nearly silent",
+   "pattern": null,
+   "note": "Pads and voice; the electric is not audible here. Chords for reference.",
+   "bars": [
+    [
+     "B",
+     "E"
+    ],
+    [
+     "E"
+    ],
+    [
+     "F#m"
+    ],
+    [
+     "F#m"
+    ],
+    [
+     "F#m",
+     "G#m"
+    ],
+    [
+     "G#m",
+     "F#m"
+    ],
+    [
+     "F#m",
+     "E"
+    ],
+    [
+     "E"
+    ],
+    [
+     "F#m",
+     "B"
+    ],
+    [
+     "B"
+    ],
+    [
+     "B"
+    ],
+    [
+     "E"
+    ]
+   ]
+  },
+  {
+   "name": "PART B - chorus (3:07)",
+   "pattern": "hold",
+   "note": "Band in, guitar swells under the chords.",
+   "bars": [
+    [
+     "C#m"
+    ],
+    [
+     "C#m",
+     "G#m"
+    ],
+    [
+     "A"
+    ],
+    [
+     "A",
+     "F#"
+    ],
+    [
+     "F#"
+    ],
+    [
+     "F#",
+     "B"
+    ],
+    [
+     "B",
+     "C#"
+    ],
+    [
+     "C#"
+    ],
+    [
+     "F#m"
+    ],
+    [
+     "F#m",
+     "B"
+    ],
+    [
+     "B"
+    ],
+    [
+     "E",
+     "A"
+    ],
+    [
+     "A",
+     "B"
+    ],
+    [
+     "B"
+    ],
+    [
+     "B",
+     "E"
+    ],
+    [
+     "E"
+    ]
+   ]
+  },
+  {
+   "name": "PART C (F minor) - (3:51)",
+   "pattern": "arp2",
+   "note": "Guitar back with broken chords; drums in.",
+   "bars": [
+    [
+     "Fm"
+    ],
+    [
+     "Fm"
+    ],
+    [
+     "Fm"
+    ],
+    [
+     "Fm"
+    ],
+    [
+     "Eb/G"
+    ],
+    [
+     "Ab"
+    ],
+    [
+     "Ab",
+     "Bb"
+    ],
+    [
+     "Bb",
+     "Eb"
+    ],
+    [
+     "Fm",
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C"
+    ]
+   ]
+  },
+  {
+   "name": "PART C - quiet verse (4:30) - guitar tacet",
+   "pattern": null,
+   "note": "Voice and keys.",
+   "bars": [
+    [
+     "Db"
+    ],
+    [
+     "Db"
+    ],
+    [
+     "Db",
+     "C"
+    ],
+    [
+     "C",
+     "Fm"
+    ]
+   ]
+  },
+  {
+   "name": "PART C - final (4:42)",
+   "pattern": "arp2",
+   "note": "Ends on Fm, let ring.",
+   "bars": [
+    [
+     "Fm"
+    ],
+    [
+     "Fm",
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "C",
+     "Fm",
+     "Fm",
+     "Eb"
+    ],
+    [
+     "Db"
+    ],
+    [
+     "Db",
+     "C"
+    ],
+    [
+     "C"
+    ],
+    [
+     "Fm"
+    ],
+    [
+     "Fm"
+    ],
+    [
+     "Fm"
+    ],
+    [
+     "Fm"
+    ],
+    [
+     "Fm"
+    ]
+   ]
+  }
+ ]
+}

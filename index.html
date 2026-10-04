@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tab Player</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav id="songs" class="songs" aria-label="Songs"></nav>
+<main id="main" class="main">
+  <header class="song-head">
+    <h1 id="title"></h1>
+    <p id="meta" class="meta"></p>
+    <div class="mode" role="group" aria-label="Tab version">
+      <button type="button" data-mode="played">Tab 1 as played</button>
+      <button type="button" data-mode="movable">Tab 2 movable shapes</button>
+    </div>
+    <details class="notes">
+      <summary>Notes</summary>
+      <div id="notes"></div>
+    </details>
+    <div id="shapes" class="shapes"></div>
+  </header>
+  <div id="tab" class="tab"></div>
+</main>
+<footer class="player">
+  <button type="button" id="play" class="play" aria-label="Play"></button>
+  <button type="button" id="back" title="Back 5s (Left)">−5s</button>
+  <button type="button" id="fwd" title="Forward 5s (Right)">+5s</button>
+  <button type="button" id="prev" title="Previous section (Shift+Left)">‹ Section</button>
+  <button type="button" id="restart" title="Restart section">↺ Section</button>
+  <button type="button" id="next" title="Next section (Shift+Right)">Section ›</button>
+  <button type="button" id="loop" class="toggle" title="Loop section (L)">Loop</button>
+  <select id="rate" aria-label="Speed">
+    <option value="0.6">0.6×</option>
+    <option value="0.75">0.75×</option>
+    <option value="0.9">0.9×</option>
+    <option value="1">1.0×</option>
+  </select>
+  <input id="seek" class="seek" type="range" min="0" max="1" step="0.1" value="0" aria-label="Seek">
+  <span id="time" class="time">0:00 / 0:00</span>
+  <button type="button" id="autoscroll" class="toggle" title="Autoscroll (A)">Autoscroll</button>
+</footer>
+<audio id="audio" preload="auto"></audio>
+<script src="app.js"></script>
+</body>
+</html>
